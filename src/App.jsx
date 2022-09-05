@@ -1,15 +1,10 @@
-import './index.css'
-import { createRoot } from 'react-dom/client'
 import React from 'react'
-
 import Primeiro from './components/basicos/Primeiro'
 import ComParametro from './components/basicos/ComParametro'
-import Fragmento from './components/basicos/Fragmento'
 
-const container = document.getElementById('root')
-const root = createRoot(container)
-root.render(
-    <div id='app'>
+export default function App(props) {
+    return (
+        <div id='app'>
         <Primeiro></Primeiro>
         <ComParametro 
             titulo="Situação do aluno"
@@ -19,6 +14,7 @@ root.render(
             titulo="Situação do aluno"
             aluno="Maria"
             nota={9.9}/>
-        <Fragmento/>
+            
     </div>
-)
+    )
+}
