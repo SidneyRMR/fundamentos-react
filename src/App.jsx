@@ -6,16 +6,26 @@ import Aleatorio from './components/basicos/Aleatorio'
 import Card from './components/layout/Card'
 import Familia from './components/basicos/Familia'
 import FamiliaMembro from './components/basicos/FamiliaMembro'
+import ListaAlunos from './components/repeticao/ListaAlunos'
+import TabelaProdutos from './components/repeticao/TabelaProdutos'
+
 import './App.css'
+
 
 export default () =>
     <div className='App'>
         <h1>Fundamentos React</h1>
         <div className='Cards'>
+            <Card titulo="#07 - Desafio Tabela Produtos" color="#bbbbbb">
+                <TabelaProdutos/>
+            </Card>
+            <Card titulo="#06 - Repetição" color="#1b3838">
+                <ListaAlunos/>
+            </Card>
             <Card titulo="#05 - Componente com Filho" color="#d4af37">
                 <Familia sobrenome="Ferreira">
                     <FamiliaMembro nome="Pedro"/>
-                    <FamiliaMembro nome="Ana" />
+                    <FamiliaMembro nome="Ana"/>
                     <FamiliaMembro nome="Gustavo"/>
                 </Familia>
             </Card>
