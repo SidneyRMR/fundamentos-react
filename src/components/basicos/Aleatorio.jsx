@@ -1,4 +1,4 @@
-export default props => {
+export default function(props) {
     const { min, max } = props
     const aleatorio = parseInt(Math.random() * (max - min) + min)
 
