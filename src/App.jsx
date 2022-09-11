@@ -9,9 +9,9 @@ import FamiliaMembro from './components/basicos/FamiliaMembro'
 import ListaAlunos from './components/repeticao/ListaAlunos'
 import TabelaProdutos from './components/repeticao/TabelaProdutos'
 import ParOuImpar from './components/condicional/ParOuImpar'
+import UsuarioInfo from './components/condicional/UsuarioInfo'
 
 import './App.css'
-
 
 export default App =>
     <div className='App'>
@@ -19,6 +19,9 @@ export default App =>
         <div className='Cards'>
             <Card titulo="#08 - Renderização Condicional" color="#30e641">
                 <ParOuImpar numero={20}/>
+                <UsuarioInfo usuario={{nome: 'Fernando'}}/>
+                <UsuarioInfo usuario={{email: 'fee@email.com'}}/>
+                <UsuarioInfo usuario={{}}/>
             </Card>
             <Card titulo="#07 - Desafio Tabela Produtos" color="#bbbbbb">
                 <TabelaProdutos/>
