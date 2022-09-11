@@ -4,11 +4,13 @@
 
 .TabelaProdutos th {
     background-color: darkcyan;
+    color: white;
 }
 
 .TabelaProdutos .Par {
     background-color: #ddd;
 }
+
 .TabelaProdutos .Impar {
     background-color: #ccc;
 }
