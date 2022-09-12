@@ -1,6 +1,8 @@
 import './Contador.css'
 import { Component } from "react"
-
+import Display from './Display'
+import Botoes from './Botoes'
+import PassoForm from './PassoForm'
 
 class Contador extends Component {
     /* para definir state em cnponentes baseados em classe eu preciso
@@ -39,9 +41,9 @@ class Contador extends Component {
             })
         }
 
-        setPasso = (e) => {
+        setPasso = (novoPasso) => {
             this.setState({
-                passo: +e.target.value,
+                passo: novoPasso,
             })
         }
 
@@ -50,15 +52,10 @@ class Contador extends Component {
             <div className='Contador'>
                 <h2>Contador</h2>
                 {/* sempre que uso componentes baseados em classe eu preciso usar o this antes das variaveis */}
-                <p>{this.state.numero}</p>{/* Carrega o state.numero que recebeu o valor passado no App */}
-                <div>
-                    <label htmlFor="passoInput">Passo: </label>
-                    <input id="passoInput" type="number" 
-                           value={this.state.passo} 
-                           onChange={this.setPasso}/>
-                </div>
-                <button onClick={this.inc}>+</button>
-                <button onClick={this.dec}>-</button>
+                {/* Carrega o state.numero que recebeu o valor passado no App */}
+                <Display numero={this.state.numero} />
+                <PassoForm passo={this.state.passo} setPasso={this.setPasso}/>
+                <Botoes setInc={this.inc} setDec={this.dec}/>
             </div>
         )
     }
