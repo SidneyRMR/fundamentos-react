@@ -1,6 +1,7 @@
 import './Input.css'
 import React, { useState } from "react";
 
+// useState é um tipo de hook
 export default  props =>  {
     const [valor, setValor] = useState()
 

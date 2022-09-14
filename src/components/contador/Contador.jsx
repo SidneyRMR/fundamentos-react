@@ -15,7 +15,7 @@ class Contador extends Component {
        */
         state = {
             numero: this.props.numeroInicial || 0,
-            passo: this.props.passoInicial || 5,
+            passo: this.props.passoInicial || 1,
         }
 
         // constructor(props) {

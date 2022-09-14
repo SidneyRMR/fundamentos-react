@@ -12,8 +12,9 @@ import ParOuImpar from './components/condicional/ParOuImpar'
 import UsuarioInfo from './components/condicional/UsuarioInfo'
 import DiretaPai from './components/comunicacao/DiretaPai'
 import IndiretaPai from './components/comunicacao/IndiretaPai'
-import Input from './components/fomulario/Input.jsx'
-import Contador from './components/contador/Contador.jsx'
+import Input from './components/fomulario/Input'
+import Contador from './components/contador/Contador'
+import Mega from './components/mega/Mega'
 
 import './App.css'
 
@@ -21,8 +22,11 @@ export default App =>
     <div className='App'>
         <h1>Fundamentos React</h1>
         <div className='Cards'>
+            <Card titulo="#13 - Megasena" color="#53e464">
+                <Mega />
+            </Card>
             <Card titulo="#12 - Contador" color="#536ce4">
-                <Contador numeroInicial={10}/>
+                <Contador numeroInicial={0}/>
             </Card>
             <Card titulo="#11 - Componente Controlado Input" color="#507967">
                 <Input />
